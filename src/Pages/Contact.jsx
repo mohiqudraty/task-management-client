@@ -10,8 +10,8 @@ const Contact = () => {
         Have questions or need assistance? Feel free to reach out to our support team. You can contact us via email or phone:
         </p>
       </div>
-      <div className="mt-10">
-            <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+      <div className="mt-10 w-4/5 mx-auto">
+            <div className="space-y-10  md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                 <div className="flex">
                     <div className="flex-shrink-0">
                         <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">

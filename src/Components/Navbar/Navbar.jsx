@@ -4,7 +4,7 @@ import useAuth from "../../Hooks/useAuth";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { useState } from "react";
 const Navbar = () => {
-const {logoutUser} = useAuth()
+const {user, logoutUser} = useAuth()
 const [showMenu, setShowMenu] = useState(false);
 
 const toggleMenu = () => {
@@ -21,7 +21,7 @@ const handleLogout = () => {
     <li><NavLink to={'/'}
                     className={({ isActive, isPending }) =>
                       isActive
-                        ? "active"
+                        ? "font-medium underline ease-in-out"
                         : isPending
                         ? "pending"
                         : "text-lg"
@@ -32,7 +32,7 @@ const handleLogout = () => {
     <li><NavLink to={'/features'}
                     className={({ isActive, isPending }) =>
                       isActive
-                        ? "active"
+                        ? "font-medium underline ease-in-out"
                         : isPending
                         ? "pending"
                         : "text-lg"
@@ -43,7 +43,7 @@ const handleLogout = () => {
     <li><NavLink to={'/about'}
                     className={({ isActive, isPending }) =>
                       isActive
-                        ? "active"
+                        ? "font-medium underline ease-in-out"
                         : isPending
                         ? "pending"
                         : "text-lg"
@@ -54,7 +54,7 @@ const handleLogout = () => {
     <li><NavLink to={'/contact'}
                     className={({ isActive, isPending }) =>
                       isActive
-                        ? "active"
+                        ? "font-medium underline ease-in-out"
                         : isPending
                         ? "pending"
                         : "text-lg"
@@ -62,9 +62,15 @@ const handleLogout = () => {
                     Contact
         </NavLink>
     </li>
+    {!user ? <> 
     <li><Link to={'/register'}>Register</Link></li>
     <li><Link to={'/login'}>Log in</Link></li>
+    </> : <>
+    <li><Link to={'/dashboard'}>Dashboard</Link></li>
     <button onClick={handleLogout} className="bg-green-500 p-2">Log Out</button>
+    </>
+    }
+    
     </>
     return (
         <nav className="flex justify-between items-center p-3 relative">

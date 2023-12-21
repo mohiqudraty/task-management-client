@@ -1,29 +1,33 @@
-// TaskPage.jsx
+
+import useGetTasks from '../../Hooks/useGetTasks';
+import Loader from '../Loader/Loader';
+import AddTask from './AddTask';
+import TaskCard from './TaskCard';
 
 const Task = () => {
-  // Sample tasks data for illustration
-  const tasks = [
-    { id: 1, title: 'Task 1: Create new feature', description: 'Description for Task 1', deadline: '2023-12-31', priority: 'High' },
-    { id: 2, title: 'Task 2: Review designs', description: 'Description for Task 2', deadline: '2023-12-25', priority: 'Moderate' },
-    { id: 3, title: 'Task 3: Update documentation', description: 'Description for Task 3', deadline: '2023-12-20', priority: 'Low' },
-  ];
+  const { tasks,  isLoading, refetch } = useGetTasks();
+
+  console.log(tasks);
+if(isLoading){
+  return <Loader></Loader>
+}
+
+refetch()
 
   return (
-    <div className="container mx-auto py-8">
-      <h2 className="text-3xl font-bold mb-6">Task Management</h2>
-
+    <div className="container mx-auto py-8 pl-[25%]">
+      <h2 className="text-3xl font-bold mb-6 text-center"><span className='pb-2 border-b-2 border-blue-500 border-double mb-5 '>Task Management</span></h2>
+{/* add task  */}
+<div className='my-2 w-40 mx-auto'><AddTask></AddTask></div>
       {/* Task List */}
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {tasks.map((task) => (
-          <div key={task.id} className="bg-white rounded-md shadow-md p-4">
-            <h3 className="text-xl font-semibold mb-2">{task.title}</h3>
-            <p className="text-gray-600 mb-2">{task.description}</p>
-            <p className="text-gray-500 mb-2">Deadline: {task.deadline}</p>
-            <p className="text-gray-500 mb-2">Priority: {task.priority}</p>
-            {/* Add more task details or actions as needed */}
-          </div>
-        ))}
+     
+        {/* card  */}
+      <div className='space-y-5'>
+      {
+          tasks.map(task => <TaskCard key={task._id} task={task}></TaskCard> )
+        }
       </div>
+
     </div>
   );
 };

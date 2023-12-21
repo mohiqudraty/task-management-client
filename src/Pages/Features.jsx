@@ -1,6 +1,6 @@
 const Features = () => {
     return (
-        <section className="bg-gray-200 py-20">
+        <section className="bg-gray-200 py-10">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-blue-600">Simplify Task Management</h2>
@@ -8,7 +8,7 @@ const Features = () => {
             Our platform aims to revolutionize the way you manage tasks. Expect seamless task creation, intuitive organization, and effortless collaboration within your teams.
             </p>
           </div>
-          <div className="flex flex-wrap -mx-4 mt-12">
+          <div className="flex flex-wrap -mx-4 mt-10">
             {/* Feature 1 */}
             <div className="w-full md:w-1/3 px-4 mb-8">
               <div className="rounded-md bg-white shadow-md p-8">
@@ -41,8 +41,6 @@ const Features = () => {
                 </p>
               </div>
             </div>
-  
-            {/* Add more features in a similar format */}
           </div>
         </div>
       </section>

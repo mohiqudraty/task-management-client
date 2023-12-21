@@ -10,6 +10,7 @@ const Banner = () => {
     if (!user) {
       navigate('/login');
     }
+    navigate('/dashboard');
   };
 
   return (

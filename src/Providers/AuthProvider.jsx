@@ -33,11 +33,13 @@ import app from "../Firebase/firebase.config";
   
     // login user --------------
     const loginUser = (email, password) => {
+      setLoading(true)
       return signInWithEmailAndPassword(auth, email, password);
     };
   
     // logout user----------------
     const logoutUser = () => {
+      setLoading(true)
       return signOut(auth);
     };
   

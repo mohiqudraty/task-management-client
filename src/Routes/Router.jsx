@@ -13,6 +13,7 @@ import Login from "../Components/Auth/Login";
 import DashboardPage from "../Pages/DashboardPage";
 import Dashboard from "../Components/Dashboard/Dashboard";
 import Task from "../Components/Dashboard/Task";
+import AddTask from "../Components/Dashboard/AddTask";
   
   
   const router = createBrowserRouter([
@@ -61,6 +62,10 @@ import Task from "../Components/Dashboard/Task";
         {
           path: '/dashboard/task',
           element: <Task></Task>
+        },
+        {
+          path: '/dashboard/add-task',
+          element: <AddTask></AddTask>
         }
       ]
     }
