@@ -17,7 +17,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Login Success!", { id: toastId });
-        navigate("/");
+        navigate("/dashboard");
       })
       .catch((err) => {
         console.log(err.message);
@@ -30,7 +30,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Google SignIn Success");
-        navigate("/");
+        navigate("/dashboard");
       })
       .catch((err) => console.log(err.message));
   };
