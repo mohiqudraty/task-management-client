@@ -46,7 +46,7 @@ const Register = () => {
         })
           .then(() => {
             toast.success("User Registration Success", { id: toastId });
-            navigate("/dashboard");
+            navigate("/dashboard/task");
           })
           .catch((err) => {
             toast.success(
@@ -68,7 +68,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Google SignIn Success");
-        navigate("/dashboard");
+        navigate("/dashboard/task");
       })
       .catch((err) => console.log(err.message));
   };
