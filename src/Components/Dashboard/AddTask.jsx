@@ -38,7 +38,7 @@ const AddTask = () => {
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 relative">
       <button
         className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
         onClick={() => setShowForm(!showForm)}
@@ -47,7 +47,7 @@ const AddTask = () => {
       </button>
 
       {showForm && (
-        <form onSubmit={handleSubmit(onSubmit)} className="mt-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-4 absolute top-10 bg-blue-500 p-10 -left-[50%]">
           <div className=" space-y-4">
             <input
               {...register('title', { required: true })}
@@ -77,7 +77,7 @@ const AddTask = () => {
             </select>
             <input
               type="submit"
-              className="bg-green-500 cursor-pointer text-white py-2 px-4 rounded hover:bg-green-600"
+              className="bg-green-500 block mx-auto cursor-pointer text-white py-2 px-4 rounded hover:bg-green-600"
             value={'Add'}/>
               
             

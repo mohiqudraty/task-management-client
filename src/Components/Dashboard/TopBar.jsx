@@ -1,11 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { IoHomeOutline, IoAddCircleOutline } from "react-icons/io5";
+import { MdOutlineAddTask } from "react-icons/md";
 
 
-const Sidebar = () => {
+
+const TopBar = () => {
     return (
-        <div className="md:w-1/4 hidden md:block fixed bottom-0 top-0 bg-gray-800 text-white p-4">
-       <Link to={'/dashboard/task'}> <h1 className="text-base md:text-xl lg:text-3xl font-bold mb-4"><span className="pb-2 border-b-2">Dashboard</span></h1></Link>
-        <ul className="space-y-4 mt-5">
+        <div className="md:hidden flex ">
+            <ul className="space-y-4 max-w-96 mx-auto mt-5 flex bg-blue-600 rounded-sm text-white justify-center items-center gap-5">
         <li><NavLink to={'/'}
                     className={({ isActive, isPending }) =>
                       isActive
@@ -14,7 +16,7 @@ const Sidebar = () => {
                         ? "pending"
                         : ""
                     }>
-                    Home
+                   <IoHomeOutline className="inline w-16" />
         </NavLink>
     </li>
         <li><NavLink to={'/dashboard/task'}
@@ -25,10 +27,10 @@ const Sidebar = () => {
                         ? "pending"
                         : ""
                     }>
-                    Tasks
+                    <MdOutlineAddTask className="inline w-16 mb-3" />
         </NavLink>
     </li>
-        <li><NavLink to={'/dashboard/add-task'}
+        <li><NavLink to={'/dashboard'}
                     className={({ isActive, isPending }) =>
                       isActive
                         ? "active"
@@ -36,14 +38,14 @@ const Sidebar = () => {
                         ? "pending"
                         : ""
                     }>
-                    Add Task
+                    <IoAddCircleOutline className="inline w-16 mb-3" />
         </NavLink>
     </li>
 
           
         </ul>
-      </div>
+        </div>
     );
 };
 
-export default Sidebar;
+export default TopBar;

@@ -11,9 +11,8 @@ import Error from "../Pages/Error";
 import Register from "../Components/Auth/Register";
 import Login from "../Components/Auth/Login";
 import DashboardPage from "../Pages/DashboardPage";
-import Dashboard from "../Components/Dashboard/Dashboard";
 import Task from "../Components/Dashboard/Task";
-import AddTask from "../Components/Dashboard/AddTask";
+
   
   
   const router = createBrowserRouter([
@@ -56,17 +55,10 @@ import AddTask from "../Components/Dashboard/AddTask";
       element: <DashboardPage></DashboardPage>,
       children: [
         {
-          path: '/dashboard',
-          element: <Dashboard></Dashboard>
-        },
-        {
           path: '/dashboard/task',
           element: <Task></Task>
         },
-        {
-          path: '/dashboard/add-task',
-          element: <AddTask></AddTask>
-        }
+       
       ]
     }
    
