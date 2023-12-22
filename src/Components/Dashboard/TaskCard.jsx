@@ -13,7 +13,9 @@ const TaskCard = ({task}) => {
 
 
 // update task -----
-
+const handleUpdate = () => {
+    axiosPublic.put()
+}
 
 // delete task ----
     const handleDelete = () => {
@@ -40,7 +42,7 @@ const TaskCard = ({task}) => {
       {/* update and delete  */}
       <div className="flex gap-1">
     <button onClick={handleDelete}><RiDeleteBinLine /></button>
-    <button onClick={handleDelete}><BiSolidEdit /></button>
+    <button onClick={handleUpdate}><BiSolidEdit /></button>
     </div>
     {/* action  */}
     <div className="flex gap-1">

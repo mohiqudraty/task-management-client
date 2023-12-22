@@ -27,20 +27,7 @@ const Sidebar = () => {
                     }>
                     Tasks
         </NavLink>
-    </li>
-        <li><NavLink to={'/dashboard/add-task'}
-                    className={({ isActive, isPending }) =>
-                      isActive
-                        ? "active"
-                        : isPending
-                        ? "pending"
-                        : ""
-                    }>
-                    Add Task
-        </NavLink>
-    </li>
-
-          
+    </li>    
         </ul>
       </div>
     );

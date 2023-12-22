@@ -30,7 +30,7 @@ const TopBar = () => {
                     <MdOutlineAddTask className="inline w-16 mb-3" />
         </NavLink>
     </li>
-        <li><NavLink to={'/dashboard'}
+        <li><NavLink to={'/dashboard/task'}
                     className={({ isActive, isPending }) =>
                       isActive
                         ? "active"
