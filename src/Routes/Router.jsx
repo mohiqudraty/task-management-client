@@ -12,6 +12,7 @@ import Register from "../Components/Auth/Register";
 import Login from "../Components/Auth/Login";
 import DashboardPage from "../Pages/DashboardPage";
 import Task from "../Components/Dashboard/Task";
+import PrivetRoute from "./PrivetRoute";
 
 
   
@@ -57,7 +58,7 @@ import Task from "../Components/Dashboard/Task";
       children: [
         {
           path: '/dashboard/task',
-          element: <Task></Task>
+          element: <PrivetRoute><Task></Task></PrivetRoute>
         },
        
       ]

@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import toast from "react-hot-toast";
 import useAuth from "../../Hooks/useAuth";
+import { FaGithub } from "react-icons/fa";
+
 
 const Register = () => {
   const { createUser, registerWithGoogle } = useAuth();
@@ -158,6 +160,7 @@ const Register = () => {
                 className="w-full flex items-center justify-center px-8 py-3 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
                 <img className="h-6 w-6" src="https://www.svgrepo.com/show/506498/google.svg"
                   alt="" />
+                  <FaGithub className="w-16 text-black" />
               </button>
             </div>
           </div>

@@ -66,7 +66,7 @@ const handleLogout = () => {
     <li><Link to={'/register'}>Register</Link></li>
     <li><Link to={'/login'}>Log in</Link></li>
     </> : <>
-    <li><Link to={'/dashboard'}>Dashboard</Link></li>
+    <li><Link to={'/dashboard/task'}>Dashboard</Link></li>
     <button onClick={handleLogout} className="bg-green-500 p-2">Log Out</button>
     </>
     }
